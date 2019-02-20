@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -22,7 +23,13 @@ module.exports = {
         ]
     },
     output: {
-        filename: '[name].bundle.js',
+        filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
-    }
+    },
+    //TODO doesn't work
+    // plugins: [
+    //     new CopyPlugin([
+    //         { from: './src/pages/*.html', to: './test' }
+    //     ]),
+    // ],
 };
