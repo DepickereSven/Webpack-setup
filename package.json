@@ -1,34 +1,33 @@
 {
-  "name": "[APP_NAME]",
+  "name": "webpack-setup",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "webpack": "^4.29.5"
+  },
+  "devDependencies": {
+    "css-loader": "^2.1.0",
+    "file-loader": "^3.0.1",
+    "style-loader": "^0.23.1",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.prod.config.js",
-    "start": "webpack-dev-server --output-public-path=/build/"
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DepickereSven/Altfolio---Altcoin-App.git"
+    "url": "git+https://github.com/DepickereSven/Webpack-setup.git"
   },
   "author": "",
-  "license": "UNLICENSED",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DepickereSven/Altfolio---Altcoin-App/issues"
+    "url": "https://github.com/DepickereSven/Webpack-setup/issues"
   },
-  "homepage": "https://github.com/DepickereSven/Altfolio---Altcoin-App#readme",
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "copy-webpack-plugin": "^4.5.1",
-    "uglifyjs-webpack-plugin": "^1.2.4",
-    "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.11.1"
-  },
-  "dependencies": {
-    "npm": "^6.4.0"
-  }
+  "homepage": "https://github.com/DepickereSven/Webpack-setup#readme"
 }
